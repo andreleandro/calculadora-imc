@@ -1,0 +1,92 @@
+:root {
+    --blue-color: #1D4350;
+    --red-color: #A43931;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: #1D4350; 
+    background: -webkit-linear-gradient(to right, var(--red-color), var(--blue-color));
+    background: linear-gradient(to right, var(--red-color), var(--blue-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    width: 50%;
+    min-width: 400px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+}
+#bmi-calc {
+    font-size: 1.875rem;
+    margin: 20px 0;
+    font-weight: 700;
+    text-align: center;
+}
+.row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 40px; 
+}
+.row span {
+    font-weight: 500;
+}
+input[type="range"] {
+    width: 70%;
+    height: 3.5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #dcdcdc;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+#result {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #0BE881;
+}
+#category {
+    font-size: 1.1rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        min-width: 260px;
+        padding: 10px 20px;
+    }
+    .row {
+        justify-content: space-around;
+    }
+    #bmi-calc {
+        font-size: 1.5rem;
+    }
+
+}
